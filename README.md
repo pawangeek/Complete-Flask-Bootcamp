@@ -1,1 +1,23 @@
 # Complete-Flask-Bootcamp
+
+- [ ] Intro (Basics)
+- [ ] Templates
+- [ ] Database
+- [ ] Flask_Sqalchemy
+- [ ] Flask WTForms : Creation of forms within Flask
+- [ ] Flask Mail : Ability to send emails to your users
+- [ ] Flask Login : For genuine authorization
+- [ ] Flask Admin : For Admin Purpose
+- [ ] Flask Resless : Used to generate simple RESTful APIs
+- [ ] Flask + DIalogflow integration : Used to integrate chatbots
+- [ ] Flask Googlmaps : Integrating google maps in flask
+- [ ] Flask Dance : Used for authentication by github, twitter etc.
+- [ ] Flask with Nosql
+- [ ] Flask SocketIO
+- [ ] Flask Security
+- [ ] Flask + Machine Learning models
+- [ ] Flask Babel
+- [ ] Flask Uploads
+- [ ] Flask Users
+- [ ] Heroku, AWS, Azure etc. Deployement
+- [ ] Examples (Complete Apps)
