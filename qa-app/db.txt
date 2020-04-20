@@ -1,0 +1,10 @@
+# PATH=%PATH%;c:\sqlite3 (to set in environment if not there)
+# sqlite3 questions.db < schema.sql ( In cmd to connect database )
+
+# sqlite3
+# .open questions.db (To open database)
+# .tables; ( to get list of tables in database)
+# select * from users(table_name); ( To see the table )
+
+# {% if not user %} is used when the user is ouside session
+# {% if user %} is usedwhen the user is in session
