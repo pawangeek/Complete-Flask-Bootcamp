@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% from "navbar.html" import navbar %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -15,40 +15,7 @@
   </head>
 
   <body>
-
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="{{ url_for('index') }}">Questions & Answers</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
-              {% if not user %}
-            <li><a href="{{ url_for('login') }}">Login</a></li>
-            <li><a href="{{ url_for('register') }}">Register</a></li>
-                {% endif %}
-
-                {% if user and user['admin']==0 and user['expert']==0 %}
-            <li><a href="{{ url_for('ask') }}">Ask Question</a></li>
-                {% endif %}
-
-                {%  if user and user['expert']==1 %}
-            <li><a href="{{ url_for('unanswered') }}">Answer Questions</a></li>
-                {% endif %}
-
-                {% if user and user['admin']==1 %}
-            <li><a href="{{ url_for('users') }}">User Setup</a></li>
-                {% endif %}
-
-                {% if user %}
-            <li><a href="{{ url_for('logout') }}">Logout</a></li>
-                {% endif %}
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+    {{ navbar(user) }}
 
     <div class="container theme-showcase" role="main">
 
@@ -63,6 +30,9 @@
                   <div class="form-group">
                     <label for="inputName" class="col-lg-2 control-label">Name</label>
                     <div class="col-lg-10">
+                        {% if error %}
+                      <div>{{ error }}</div>
+                      {% endif %}
                       <input type="text" class="form-control" name= 'name' id="inputName" placeholder="Name">
                     </div>
                   </div>
